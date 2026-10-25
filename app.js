@@ -91,12 +91,12 @@ function maakKaart(video) {
     knop.addEventListener("click", () => openVideo(video));
 
     const afbeelding = document.createElement("img");
-    afbeelding.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+    afbeelding.src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
     afbeelding.alt = "";
     afbeelding.loading = "lazy";
     afbeelding.onerror = function () {
         this.onerror = null;
-        this.src = `https://img.youtube.com/vi/${video.id}/default.jpg`;
+        this.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
     };
 
     const titel = document.createElement("h3");
