@@ -57,7 +57,7 @@ body {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Mobiele aanpassing: tekst links uitlijnen en ruimte vrijmaken voor het logo */
+/* Mobiele aanpassing: tekst strak links uitlijnen en ruimte vrijmaken voor het logo */
 @media (max-width: 650px) {
     body::before {
         background-position: center 10%;
@@ -65,17 +65,19 @@ body {
     }
     .topbar {
         text-align: left;
-        padding: 1rem 7rem 1rem 1rem;
+        padding: 1.25rem 7.5rem 1.25rem 1.25rem; /* Meer ruimte rechts voor het logo, links wat lucht */
     }
     .topbar h1 {
         font-size: 1.2rem;
+        text-align: left;
     }
     .topbar p {
         font-size: 0.85rem;
+        text-align: left;
     }
     .topbar-logo {
-        height: 65px;
-        right: 0.75rem;
+        height: 60px;
+        right: 1rem;
     }
 }
 
