@@ -33,6 +33,18 @@ body {
 .topbar h1 { margin: 0; font-size: 1.6rem; letter-spacing: 0.08em; }
 .topbar p { margin: 0.25rem 0 0; opacity: 0.9; }
 
+.topbar-logo {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+    height: 48px;
+    width: auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
 /* Zoekveld */
 #zoekveld {
     display: block;
@@ -146,10 +158,10 @@ body {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.35;
-    min-height: calc(2 * 1.35em + 1.4rem); /* Dwingt altijd de hoogte van 2 regels af */
+    min-height: calc(2 * 1.35em + 1.4rem);
     flex-grow: 1;
     display: flex;
-    align-items: center; /* Centreert korte titels netjes verticaal in het witte vlak */
+    align-items: center;
 }
 
 /* Afspeelvenster */
@@ -216,10 +228,19 @@ body::before {
     z-index: 0;
 }
 
-/* Mobiel: groter, iets hoger */
-@media (max-width: 600px) {
+/* Mobiel: watermerk en DS2P-logo netjes schalen */
+@media (max-width: 650px) {
     body::before {
         background-position: center 10%;
         background-size: 85vw auto;
+    }
+    .topbar {
+        padding-bottom: 3.8rem;
+    }
+    .topbar-logo {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 0.5rem;
+        height: 40px;
     }
 }
