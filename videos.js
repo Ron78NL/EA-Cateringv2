@@ -72,4 +72,16 @@ const videos = [
   { id: "0QoFjfehnes", titel: "Instructie opkloppen van slagroom", categorie: "bakkerij-patisserie" },
   { id: "gKrq70jGDEQ", titel: "Instructie Passeren van Bouillon", categorie: "bouillons" },
   { id: "xvUjkwQDof8", titel: "Instructie Plukken van Makreel", categorie: "vlees-vis" },
+  { id: "GFBYaEPDNTs", titel: "Instructie Gratineren", categorie: "kooktechnieken" },
+  { id: "Ldb7AaovObI", titel: "Instructie Stoven", categorie: "kooktechnieken" },
+  { id: "6PDbjrgW5aI", titel: "Instructie Stomen", categorie: "kooktechnieken" },
+  { id: "GjyeDdybnro", titel: "Instructie Smoren", categorie: "kooktechnieken" },
+  { id: "C3C1W4pzi5Q", titel: "Instructie Sauteren", categorie: "kooktechnieken" },
+  { id: "qYlIKLi2IwQ", titel: "Instructie Pocheren", categorie: "kooktechnieken" },
+  { id: "6H4q4NoxXgY", titel: "Instructie Koken", categorie: "kooktechnieken" },
+  { id: "A9fCmhR9BFk", titel: "Instructie Grillen", categorie: "kooktechnieken" },
+  { id: "C9CLgA3OFZU", titel: "Instructie Glaceren", categorie: "kooktechnieken" },
+  { id: "hKBAmmxugFU", titel: "Instructie Frituren", categorie: "kooktechnieken" },
+  { id: "9HVRGojIZEU", titel: "Instructie Braden", categorie: "kooktechnieken" },
+  { id: "mFJ6VlAvxB4", titel: "Instructie Blancheren", categorie: "kooktechnieken" }
 ];
