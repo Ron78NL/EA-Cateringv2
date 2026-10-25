@@ -208,3 +208,10 @@ html {
 body {
     background-color: transparent !important;
 }
+
+.video-link img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
