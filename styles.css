@@ -29,7 +29,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    min-height: 130px; /* Zorgt dat de balk hoog genoeg is voor het grotere logo */
+    min-height: 140px; /* Ruim voldoende hoogte voor het grotere logo */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,32 +38,32 @@ body {
 .topbar h1 { margin: 0; font-size: 1.6rem; letter-spacing: 0.08em; }
 .topbar p { margin: 0.25rem 0 0; opacity: 0.9; }
 
-/* Logo 2x zo groot rechtsboven */
+/* Logo flink groter en duidelijker rechtsboven */
 .topbar-logo {
     position: absolute;
     right: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    height: 96px; /* Verdubbeld van 48px naar 96px */
+    height: 125px; /* Extra groot gemaakt zodat het heel duidelijk leesbaar is */
     width: auto;
     background: rgba(255, 255, 255, 0.95);
     padding: 6px 14px;
     border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Mobiele aanpassing voor het grotere logo */
+/* Mobiele aanpassing */
 @media (max-width: 650px) {
     .topbar {
         min-height: auto;
-        padding-bottom: 5.5rem;
+        padding-bottom: 6rem;
     }
     .topbar-logo {
         top: auto;
         bottom: 0.75rem;
         right: 50%;
         transform: translateX(50%);
-        height: 75px;
+        height: 90px;
     }
 }
 /* Zoekveld */
