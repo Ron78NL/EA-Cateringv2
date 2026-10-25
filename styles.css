@@ -103,10 +103,11 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1rem;
+    align-items: stretch;
 }
 .video-card {
     min-width: 0;
-    display: flex;
+    height: 100%;
 }
 .video-link {
     width: 100%;
@@ -144,7 +145,11 @@ body {
     padding: 0.6rem 0.75rem 0.8rem;
     font-size: 1rem;
     font-weight: 600;
+    line-height: 1.35;
+    min-height: calc(2 * 1.35em + 1.4rem); /* Dwingt altijd de hoogte van 2 regels af */
     flex-grow: 1;
+    display: flex;
+    align-items: center; /* Centreert korte titels netjes verticaal in het witte vlak */
 }
 
 /* Afspeelvenster */
