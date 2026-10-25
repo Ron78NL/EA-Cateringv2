@@ -259,13 +259,5 @@ body::before {
         background-position: center 10%;
         background-size: 85vw auto;
     }
-    .topbar {
-        padding-bottom: 3.8rem;
-    }
-    .topbar-logo {
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 0.5rem;
-        height: 40px;
-    }
+    
 }
