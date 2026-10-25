@@ -2,16 +2,16 @@
 // Volgorde hier = volgorde van de knoppen.
 // id: intern, niet zichtbaar. naam: wat de leerling ziet.
 const categorieen = [
-  { id: "bouillons",             naam: "Bouillons" },
-  { id: "snijtechnieken",        naam: "Snijtechnieken" },
-  { id: "groenten-fruit",        naam: "Groenten & Fruit" },
-  { id: "vlees-vis",             naam: "Vlees & Vis" },
-  { id: "sauzen",                naam: "Sauzen" },
-  { id: "bereidingstechnieken",  naam: "Bereidingstechnieken" },
-  { id: "keukenapparatuur",      naam: "Keukenapparatuur" },
-  { id: "bakkerij-patisserie",   naam: "Bakkerij & Dessert" },
-  { id: "mise-en-place",         naam: "Mise en Place" },
-  { id: "kooktechnieken",        naam: "Kooktechnieken" },
+  { id: "bouillons",            naam: "Bouillons" },
+  { id: "snijtechnieken",       naam: "Snijtechnieken" },
+  { id: "groenten-fruit",       naam: "Groenten & Fruit" },
+  { id: "vlees-vis",            naam: "Vlees & Vis" },
+  { id: "sauzen",               naam: "Sauzen" },
+  { id: "bereidingstechnieken", naam: "Bereidingstechnieken" },
+  { id: "keukenapparatuur",     naam: "Keukenapparatuur" },
+  { id: "bakkerij-dessert",     naam: "Bakkerij & Dessert" },
+  { id: "mise-en-place",        naam: "Mise en Place" },
+  { id: "kooktechnieken",       naam: "Kooktechnieken" },
 ];
 
 // ===== VIDEO'S =====
@@ -43,7 +43,7 @@ const videos = [
   { id: "oZN70meOUyg", titel: "Instructie Zeven van bloem", categorie: "bakkerij-dessert" },
   { id: "fD_Gpiukchw", titel: "Instructie uitsteken van deeg", categorie: "bakkerij-dessert" },
   { id: "U1l0h9y-Gsc", titel: "Instructie Spuiten met spuitzak", categorie: "bakkerij-dessert" },
-  { id: "0QoFjfehnes", titel: "Instructie opkloppen van slagroom", categorie: "bakkerij-dessert" }
+  { id: "0QoFjfehnes", titel: "Instructie opkloppen van slagroom", categorie: "bakkerij-dessert" },
   { id: "NJrNRkHI2tw", titel: "Instructie Schillen van Asperges", categorie: "groenten-fruit" },
   { id: "m0cK_Pge9wk", titel: "Instructie uitsnijden van sinaasappel", categorie: "groenten-fruit" },
   { id: "Rk_B5yyO0Mw", titel: "Instructie uitboren van appel", categorie: "groenten-fruit" },
@@ -59,7 +59,7 @@ const videos = [
   { id: "-ylpJWBs77M", titel: "Instructie Afwegen van ingrediënten", categorie: "mise-en-place" },
   { id: "WBYYse9ZKNI", titel: "Instructie Afmeten vloeistoffen", categorie: "mise-en-place" },
   { id: "Qgf6An9WMvo", titel: "Instructie Aardappelboor", categorie: "keukenapparatuur" },
-  { id: "lUBiJRLJy_Q", titel: "Instructie Tourneren van Aardappelen", categorie: "bereidingstechnieken" },  
+  { id: "lUBiJRLJy_Q", titel: "Instructie Tourneren van Aardappelen", categorie: "bereidingstechnieken" },
   { id: "pC1JnpVI1so", titel: "Instructie Brunoise snijden", categorie: "snijtechnieken" },
   { id: "ulr4q5Shu4s", titel: "Instructie Schaven", categorie: "snijtechnieken" },
   { id: "-RRZmj3fFmA", titel: "Instructie Pureren", categorie: "bereidingstechnieken" },
