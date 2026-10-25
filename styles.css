@@ -8,12 +8,16 @@
 
 * { box-sizing: border-box; }
 
+html {
+    background-color: #e6f2ff;
+}
+
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
     font-size: 17px;
     color: var(--tekst);
-    background: #e6f2ff;
+    background-color: transparent;
     line-height: 1.4;
 }
 
@@ -23,6 +27,8 @@ body {
     color: #fff;
     padding: 1.25rem 1rem;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 .topbar h1 { margin: 0; font-size: 1.6rem; letter-spacing: 0.08em; }
 .topbar p { margin: 0.25rem 0 0; opacity: 0.9; }
@@ -37,6 +43,8 @@ body {
     padding: 0.8rem 1rem;
     border: 2px solid var(--rand);
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 #zoekveld:focus { outline: none; border-color: var(--blauw); }
 
@@ -45,6 +53,8 @@ body {
     margin: 0.5rem auto;
     padding: 0 1rem;
     color: var(--grijs);
+    position: relative;
+    z-index: 1;
 }
 
 /* Categoriemenu */
@@ -52,6 +62,8 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 1rem;
+    position: relative;
+    z-index: 1;
 }
 .categorie-kop {
     cursor: pointer;
@@ -92,21 +104,26 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1rem;
 }
-.video-card { min-width: 0; }
+.video-card {
+    min-width: 0;
+    display: flex;
+}
 .video-link {
     width: 100%;
-    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     padding: 0;
     border: 1px solid var(--rand);
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.85);  /* was #fff */
+    background: rgba(255, 255, 255, 0.85);
     overflow: hidden;
     text-align: left;
     cursor: pointer;
     font: inherit;
     color: inherit;
-    position: relative;   /* nieuw */
-    z-index: 1;           /* nieuw */
+    position: relative;
+    z-index: 1;
 }
 .video-link:hover,
 .video-link:focus-visible {
@@ -120,12 +137,14 @@ body {
     aspect-ratio: 16 / 9;
     object-fit: cover;
     background: var(--licht);
+    flex-shrink: 0;
 }
 .video-link h3 {
     margin: 0;
     padding: 0.6rem 0.75rem 0.8rem;
     font-size: 1rem;
     font-weight: 600;
+    flex-grow: 1;
 }
 
 /* Afspeelvenster */
@@ -186,8 +205,8 @@ body::before {
     position: fixed;
     inset: 0;
     background: url("nac-logo.png") center 18% / min(70vw, 500px) no-repeat;
-    opacity: 0.12;              /* intensiteit blijft gelijk */
-    filter: contrast(1.4);      /* scherper, zonder meer intensiteit */
+    opacity: 0.12;
+    filter: contrast(1.4);
     pointer-events: none;
     z-index: 0;
 }
@@ -198,20 +217,4 @@ body::before {
         background-position: center 10%;
         background-size: 85vw auto;
     }
-}
-
-/* Lichtblauwe achtergrond */
-html {
-    background-color: #e6f2ff !important;
-}
-
-body {
-    background-color: transparent !important;
-}
-
-.video-link img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    display: block;
 }
