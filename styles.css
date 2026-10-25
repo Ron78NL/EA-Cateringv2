@@ -270,9 +270,21 @@ body::before {
     z-index: 0;
 }
 
-@media (max-width: 650px) {
-    body::before {
-        background-position: center 10%;
-        background-size: 85vw auto;
+/* Grotere schermen (desktop) */
+@media (min-width: 651px) {
+    .topbar {
+        padding: 1.5rem 2rem;
+    }
+    .topbar-tekst {
+        max-width: none;
+    }
+    .topbar h1 {
+        font-size: 1.8rem;
+    }
+    .topbar p {
+        font-size: 0.95rem;
+    }
+    .topbar-logo {
+        height: 90px;
     }
 }
