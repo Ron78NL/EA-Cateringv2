@@ -21,7 +21,7 @@ body {
     line-height: 1.4;
 }
 
-/* Koptekst met Flexbox */
+/* Koptekst (Standaard mobiel: flexbox links uitgelijnd) */
 .topbar {
     background: var(--blauw);
     color: #fff;
@@ -45,7 +45,7 @@ body {
     margin: 0; 
     font-size: 1.35rem; 
     letter-spacing: 0.08em; 
-    white-space: nowrap; /* Dwingt EA CATERING om naast elkaar te blijven */
+    white-space: nowrap;
 }
 
 .topbar p { 
@@ -68,13 +68,16 @@ body {
     flex-shrink: 0;
 }
 
-/* Grotere schermen (desktop) */
+/* Grotere schermen (Desktop): gecentreerde koptekst en logo absoluut rechts */
 @media (min-width: 651px) {
     .topbar {
         padding: 1.5rem 2rem;
+        text-align: center;
+        display: block;
     }
     .topbar-tekst {
         max-width: none;
+        text-align: center;
     }
     .topbar h1 {
         font-size: 1.8rem;
@@ -83,6 +86,10 @@ body {
         font-size: 0.95rem;
     }
     .topbar-logo {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
         height: 90px;
     }
 }
@@ -268,23 +275,4 @@ body::before {
     filter: contrast(1.4);
     pointer-events: none;
     z-index: 0;
-}
-
-/* Grotere schermen (desktop) */
-@media (min-width: 651px) {
-    .topbar {
-        padding: 1.5rem 2rem;
-    }
-    .topbar-tekst {
-        max-width: none;
-    }
-    .topbar h1 {
-        font-size: 1.8rem;
-    }
-    .topbar p {
-        font-size: 0.95rem;
-    }
-    .topbar-logo {
-        height: 90px;
-    }
 }
