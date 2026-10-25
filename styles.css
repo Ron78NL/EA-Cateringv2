@@ -54,17 +54,12 @@ body {
 
 /* Mobiele aanpassing */
 @media (max-width: 650px) {
-    .topbar {
-        min-height: auto;
-        padding-bottom: 6rem;
+    body::before {
+        background-position: center 10%;
+        background-size: 85vw auto;
     }
-    .topbar-logo {
-        top: auto;
-        bottom: 0.75rem;
-        right: 50%;
-        transform: translateX(50%);
-        height: 90px;
-    }
+    /* De regels voor .topbar en .topbar-logo zijn hier weggehaald, 
+       waardoor het logo op mobiel gewoon rechtsboven blijft staan! */
 }
 /* Zoekveld */
 #zoekveld {
