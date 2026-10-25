@@ -58,9 +58,11 @@ body {
         background-position: center 10%;
         background-size: 85vw auto;
     }
-    /* De regels voor .topbar en .topbar-logo zijn hier weggehaald, 
-       waardoor het logo op mobiel gewoon rechtsboven blijft staan! */
+    .topbar {
+        padding-bottom: 1.25rem; /* Zorgt dat de blauwe balk compact blijft op mobiel */
+    }
 }
+
 /* Zoekveld */
 #zoekveld {
     display: block;
