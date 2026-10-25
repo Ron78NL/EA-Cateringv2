@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Learning Hub</title>
+   <link rel="stylesheet" href="style.css?v=3">
+
+</head>
+<body>
+
+<div class="topbar">
+
+    <div class="title-block">
+        <h1>EA CATERING</h1>
+        <p>zoekbalk</p>
+    </div>
+
+</div>
+
+    <input
+    id="searchInput"
+    type="text"
+    placeholder="🔍 Zoek een video..."
+>
+    
+<p id="resultCount"></p>
+    
+<details class="category-panel">
+
+    <summary class="category-header">
+        📚 KEUKENTECHNIEKEN
+    </summary>
+
+    <div class="category-menu">
+
+        <button class="cat-btn active" data-category="">
+            Alle video's
+        </button>
+
+        <button class="cat-btn" data-category="Bouillons">
+            Bouillons
+        </button>
+
+        <button class="cat-btn" data-category="Snijtechnieken">
+            Snijtechnieken
+        </button>
+
+        <button class="cat-btn" data-category="Groenten & Fruit">
+            Groenten & Fruit
+        </button>
+
+        <button class="cat-btn" data-category="Vlees & Vis">
+            Vlees & Vis
+        </button>
+
+        <button class="cat-btn" data-category="Sauzen">
+            Sauzen
+        </button>
+
+        <button class="cat-btn" data-category="Bereidingstechnieken">
+            Bereidingstechnieken
+        </button>
+
+        <button class="cat-btn" data-category="Keukenapparatuur">
+            Keukenapparatuur
+        </button>
+
+        <button class="cat-btn" data-category="Bakkerij & Patisserie">
+            Bakkerij & Patisserie
+        </button>
+
+        <button class="cat-btn" data-category="Mise en Place">
+            Mise en Place
+        </button>
+
+    </div>
+
+</details>
+    
+    <div id="videoGrid" class="video-grid"></div>
+
+    <script>
+
+        const videos = [
+
+{ title: "Instructie Reduceren van Bouillon", id: "AZdPYo1RWfQ" },
+{ title: "Instructie Degraisseren van Bouillon", id: "ABYB6CxNeVo" },
+{ title: "Instructie Arrosseren", id: "KfdiOrQkN4U" },
+{ title: "Instructie Aanbraden", id: "KD_NEiQ8Lj4" },
+{ title: "Instructie Vacumeren", id: "KcJeU7aODPY" },
+{ title: "Instructie Ontzuren van Tomatenpuree", id: "7oi2S1cfILE" },
+{ title: "Instructie Myoteren van Kerrie", id: "U69i22cV-Ns" },
+{ title: "Instructie Karamelliseren", id: "aLfP0g9VvQA" },
+{ title: "Instructie Fruiten en aanzweten magere mirepoix", id: "VrBw-bB9ZK0" },
+{ title: "Instructie En Papillote", id: "VISP2VEdlMs" },
+{ title: "Instructie Barderen, Larderen en Pikeren", id: "TFc8r3EYGGo" },
+{ title: "Instructie Klaren van Boter", id: "dckCb_fxdGY" },
+{ title: "Instructie Smelten van Boter", id: "M3ThiVgcfj4" },
+{ title: "Instructie gebruik Robotcoupe", id: "3Z9BISrZ3uA" },
+{ title: "Instructiefilm Snijden van Kaas met de snijmachine", id: "YlsdetvnrUY" },
+{ title: "Instructie Ontpitten van Mango, Perzik en Kersen", id: "oR1iPJgytbM" },
+{ title: "Instructie Bloemen van Schnitzels", id: "rFt79XOHlPQ" },
+{ title: "Instructie marineren van Varkenshaas", id: "fxvBGpmQMt4" },
+{ title: "Instructie Doorwrijven vruchtencoulis", id: "fEN31QGGx5M" },
+{ title: "Instructie mengen Sla en Dressing", id: "ugkUzNX4qkM" },
+{ title: "Instructie spatelen van chocomousse", id: "Jw1CXHBeEKQ" },
+{ title: "Instructie Zeven van bloem", id: "oZN70meOUyg" },
+{ title: "Instructie Schillen van Asperges", id: "NJrNRkHI2tw" },
+{ title: "Instructie uitsteken van deeg", id: "fD_Gpiukchw" },
+{ title: "Instructie uitsnijden van sinaasappel", id: "m0cK_Pge9wk" },
+{ title: "Instructie uitboren van appel", id: "Rk_B5yyO0Mw" },
+{ title: "Instructie Canneleren van citroen", id: "Axz_LhRS3pk" },
+{ title: "Instructie Raspen", id: "Rv_Yq7ka_lU" },
+{ title: "Instructie Hakken van Peterselie", id: "BoRaJGuFCWY" },
+{ title: "Instructie Snipperen van Ui", id: "jMmrwCJZpAY" },
+{ title: "Instructiefilm Wassen van sla", id: "t1qnTkSJ8Uk" },
+{ title: "Instructiefilm Bouillon maken", id: "xmc2JEyu6LM" },
+{ title: "Instructie Monderen", id: "AZHcylydIks" },
+{ title: "Instructie Chinoise", id: "q9zlcYsxeuU" },
+{ title: "Instructie Basis snijtechnieken", id: "JQjxhGzwTrA" },
+{ title: "Instructie Afwegen van ingrediënten", id: "-ylpJWBs77M" },
+{ title: "Instructie Afmeten vloeistoffen", id: "WBYYse9ZKNI" },
+{ title: "Instructie Aardappelboor", id: "Qgf6An9WMvo" },
+{ title: "Instructie Tourneren van Aardappelen", id: "lUBiJRLJy_Q" },
+{ title: "Instructie Spuiten met spuitzak", id: "U1l0h9y-Gsc" },
+{ title: "Instructie Brunoise snijden", id: "pC1JnpVI1so" },
+{ title: "Instructie Schaven", id: "ulr4q5Shu4s" },
+{ title: "Instructie Pureren", id: "-RRZmj3fFmA" },
+{ title: "Instructie Julienne snijden", id: "xDr0W8D6jh0" },
+{ title: "Instructie Dressing maken", id: "95pwbgIikZk" },
+{ title: "Instructie Ciseleren", id: "OTUE7Q4Mdxo" },
+{ title: "Instructie Afschuimen", id: "qwHLqZHukIo" },
+{ title: "Instructie Afblussen", id: "hi6CqhmMddQ" },
+{ title: "Instructie Deglaceren", id: "OrcQfrNCZ4Q" },
+{ title: "Instructie Monteren", id: "C9kixHqbfCQ" },
+{ title: "Instructie Liëren van soep", id: "5xnvjpNWbAI" },
+{ title: "Instructie opkloppen van slagroom", id: "0QoFjfehnes" },
+{ title: "Instructie Passeren van Bouillon", id: "gKrq70jGDEQ" },
+{ title: "Instructie Plukken van Makreel", id: "xvUjkwQDof8" }
+
+];
+
+    const categories = {
+
+    "Bouillons": [
+        "AZdPYo1RWfQ",
+        "ABYB6CxNeVo",
+        "xmc2JEyu6LM",
+        "gKrq70jGDEQ",
+        "qwHLqZHukIo",
+        "q9zlcYsxeuU"
+    ],
+
+    "Snijtechnieken": [
+        "JQjxhGzwTrA",
+        "pC1JnpVI1so",
+        "xDr0W8D6jh0",
+        "OTUE7Q4Mdxo",
+        "jMmrwCJZpAY",
+        "BoRaJGuFCWY",
+        "ulr4q5Shu4s",
+        "Rv_Yq7ka_lU"
+    ],
+
+    "Groenten & Fruit": [
+        "NJrNRkHI2tw",
+        "oR1iPJgytbM",
+        "m0cK_Pge9wk",
+        "Rk_B5yyO0Mw",
+        "Axz_LhRS3pk"
+    ],
+
+    "Vlees & Vis": [
+        "KD_NEiQ8Lj4",
+        "rFt79XOHlPQ",
+        "fxvBGpmQMt4",
+        "TFc8r3EYGGo",
+        "xvUjkwQDof8"
+    ],
+
+    "Sauzen": [
+        "KfdiOrQkN4U",
+        "95pwbgIikZk",
+        "C9kixHqbfCQ",
+        "hi6CqhmMddQ",
+        "OrcQfrNCZ4Q"
+    ],
+
+    "Bereidingstechnieken": [
+        "KcJeU7aODPY",
+        "VISP2VEdlMs",
+        "aLfP0g9VvQA",
+        "VrBw-bB9ZK0",
+        "M3ThiVgcfj4"
+    ],
+
+    "Keukenapparatuur": [
+        "3Z9BISrZ3uA",
+        "YlsdetvnrUY",
+        "Qgf6An9WMvo"
+    ],
+
+    "Bakkerij & Patisserie": [
+        "U1l0h9y-Gsc",
+        "fD_Gpiukchw",
+        "Jw1CXHBeEKQ",
+        "oZN70meOUyg",
+        "0QoFjfehnes"
+    ],
+
+    "Mise en Place": [
+        "-ylpJWBs77M",
+        "WBYYse9ZKNI",
+        "t1qnTkSJ8Uk",
+        "ugkUzNX4qkM",
+        "-RRZmj3fFmA"
+    ]
+
+};
+
+let geselecteerdeCategorie = "";
+
+document
+.querySelectorAll(".cat-btn")
+.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        document
+            .querySelectorAll(".cat-btn")
+            .forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+        button.classList.add("active");
+
+        geselecteerdeCategorie =
+            button.dataset.category;
+
+        filterVideos();
+
+    });
+
+});
+function toonVideos(lijst) {
+
+    videoGrid.innerHTML = "";
+
+    lijst.forEach(video => {
+
+        const card = document.createElement("div");
+        card.className = "video-card";
+
+        const link = document.createElement("a");
+        link.href = `https://www.youtube.com/watch?v=${video.id}`;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+        const image = document.createElement("img");
+        image.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+        image.alt = video.title;
+
+        image.onerror = function() {
+            this.src = `https://img.youtube.com/vi/${video.id}/default.jpg`;
+        };
+
+        const title = document.createElement("h3");
+        title.textContent = video.title;
+
+        link.appendChild(image);
+        link.appendChild(title);
+
+        card.appendChild(link);
+
+        videoGrid.appendChild(card);
+
+    });
+
+}
+function filterVideos() {
+
+    const zoekterm =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const gefilterd = videos.filter(video => {
+
+        const titelMatch =
+            video.title.toLowerCase().includes(zoekterm);
+
+const categorieMatch =
+    geselecteerdeCategorie === "" ||
+
+    categories[geselecteerdeCategorie]
+        ?.includes(video.id);
+
+return titelMatch && categorieMatch;
+
+    });
+
+    toonVideos(gefilterd);
+
+document.getElementById("resultCount").textContent =
+    `${gefilterd.length} video('s) gevonden`;
+
+}
+
+toonVideos(videos);
+
+        
+document.getElementById("resultCount").textContent =
+    `${videos.length} video's gevonden`;
+
+document
+    .getElementById("searchInput")
+    .addEventListener("keyup", filterVideos);
+        
+    </script>
+
+</body>
+</html>

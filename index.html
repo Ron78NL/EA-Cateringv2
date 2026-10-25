@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EA Catering – Instructievideo's</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2563eb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="EA Catering">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>EA CATERING</h1>
+    <p>Instructievideo's keukentechnieken</p>
+</header>
+
+<input id="zoekveld" type="search" placeholder="🔍 Zoek een video..." autocomplete="off" aria-label="Zoeken">
+
+<p id="aantal" aria-live="polite"></p>
+
+<details class="categorie-paneel" id="categoriePaneel">
+    <summary class="categorie-kop" id="categorieKop">📚 KEUKENTECHNIEKEN</summary>
+    <div class="categorie-menu" id="categorieMenu"></div>
+</details>
+
+<div id="videoGrid" class="video-grid"></div>
+
+<!-- Afspeelvenster -->
+<div id="videoModal" class="video-modal">
+    <div class="video-modal-inner">
+        <button type="button" class="video-sluit" id="sluit" aria-label="Sluiten">✕</button>
+        <div class="video-frame" id="videoFrame"></div>
+        <a id="videoExtern" class="video-extern" target="_blank" rel="noopener noreferrer">Bekijk op YouTube</a>
+    </div>
+</div>
+
+<script src="videos.js"></script>
+<script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js");
+}
+</script>
+</body>
+</html>

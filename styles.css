@@ -1,0 +1,210 @@
+:root {
+    --blauw: #2563eb;
+    --tekst: #1a1a1a;
+    --grijs: #6b7280;
+    --licht: #f3f4f6;
+    --rand: #d1d5db;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    font-size: 17px;
+    color: var(--tekst);
+    background: #e6f2ff;
+    line-height: 1.4;
+}
+
+/* Koptekst */
+.topbar {
+    background: var(--blauw);
+    color: #fff;
+    padding: 1.25rem 1rem;
+    text-align: center;
+}
+.topbar h1 { margin: 0; font-size: 1.6rem; letter-spacing: 0.08em; }
+.topbar p { margin: 0.25rem 0 0; opacity: 0.9; }
+
+/* Zoekveld */
+#zoekveld {
+    display: block;
+    width: calc(100% - 2rem);
+    max-width: 900px;
+    margin: 1rem auto 0.5rem;
+    font: inherit;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--rand);
+    border-radius: 10px;
+}
+#zoekveld:focus { outline: none; border-color: var(--blauw); }
+
+#aantal {
+    max-width: 900px;
+    margin: 0.5rem auto;
+    padding: 0 1rem;
+    color: var(--grijs);
+}
+
+/* Categoriemenu */
+.categorie-paneel {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.categorie-kop {
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.8rem 1rem;
+    background: var(--licht);
+    border-radius: 10px;
+    list-style: none;
+}
+.categorie-kop::-webkit-details-marker { display: none; }
+.categorie-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+}
+.cat-btn {
+    font: inherit;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--blauw);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--blauw);
+    cursor: pointer;
+}
+.cat-btn.active {
+    background: var(--blauw);
+    color: #fff;
+}
+.cat-btn[hidden] { display: none; }
+
+/* Videogrid */
+.video-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+.video-card { min-width: 0; }
+.video-link {
+    width: 100%;
+    display: block;
+    padding: 0;
+    border: 1px solid var(--rand);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);  /* was #fff */
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    position: relative;   /* nieuw */
+    z-index: 1;           /* nieuw */
+}
+.video-link:hover,
+.video-link:focus-visible {
+    border-color: var(--blauw);
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.video-link img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--licht);
+}
+.video-link h3 {
+    margin: 0;
+    padding: 0.6rem 0.75rem 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Afspeelvenster */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.video-modal.open { display: flex; }
+
+.video-modal-inner {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+.video-sluit {
+    position: absolute;
+    top: -2.75rem;
+    right: 0;
+    font: inherit;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background: #fff;
+    color: var(--tekst);
+    cursor: pointer;
+}
+.video-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.video-extern {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Watermerk NAC-logo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("nac-logo.png") center 18% / min(70vw, 500px) no-repeat;
+    opacity: 0.12;              /* intensiteit blijft gelijk */
+    filter: contrast(1.4);      /* scherper, zonder meer intensiteit */
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Mobiel: groter, iets hoger */
+@media (max-width: 600px) {
+    body::before {
+        background-position: center 10%;
+        background-size: 85vw auto;
+    }
+}
+
+/* Lichtblauwe achtergrond */
+html {
+    background-color: #e6f2ff !important;
+}
+
+body {
+    background-color: transparent !important;
+}
