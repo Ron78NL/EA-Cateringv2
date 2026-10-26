@@ -12,7 +12,7 @@ const categorieen = [
   { id: "bakkerij-dessert",     naam: "Bakkerij & Dessert" },
   { id: "mise-en-place",        naam: "Mise en Place" },
   { id: "kooktechnieken",       naam: "Kooktechnieken" },
-  { id: "Keukenapperatuur",     naam: "Keukenapperatuur" },
+
 ];
 
 // ===== VIDEO'S =====
@@ -85,11 +85,11 @@ const videos = [
   { id: "C9CLgA3OFZU", titel: "Instructie Glaceren", categorie: "kooktechnieken" },
   { id: "hKBAmmxugFU", titel: "Instructie Frituren", categorie: "kooktechnieken" },
   { id: "9HVRGojIZEU", titel: "Instructie Braden", categorie: "kooktechnieken" },
-  { id: "mFJ6VlAvxB4", titel: "Instructie Blancheren", categorie: "kooktechnieken" }
-  { id: "872YfwIce1k", titel: "Instructie Braadbak", categorie: "Keukenapperatuur" },
-  { id: "-zx5q3zRwXA", titel: "Instructie Combisteamer", categorie: "Keukenapperatuur" },
-  { id: "YD-m2O-spNY", titel: "Instructie Friteuse", categorie: "Keukenapperatuur" },
-  { id: "zQxBPtGgLsk", titel: "Instructie Kookketel", categorie: "Keukenapperatuur" },
-  { id: "_ILm2zaaYYc", titel: "Instructie Roux bereiden", categorie: "Keukenapperatuur" },
-  { id: "3gY1bGEUtm4", titel: "Instructie Koffiepercolator", categorie: "Keukenapperatuur" },
+  { id: "mFJ6VlAvxB4", titel: "Instructie Blancheren", categorie: "kooktechnieken" },
+  { id: "872YfwIce1k", titel: "Instructie Braadbak", categorie: "Keukenapparatuur" },
+  { id: "-zx5q3zRwXA", titel: "Instructie Combisteamer", categorie: "Keukenapparatuur" },
+  { id: "YD-m2O-spNY", titel: "Instructie Friteuse", categorie: "Keukenapparatuur" },
+  { id: "zQxBPtGgLsk", titel: "Instructie Kookketel", categorie: "Keukenapparatuur" },
+  { id: "_ILm2zaaYYc", titel: "Instructie Roux bereiden", categorie: "Keukenapparatuur" },
+  { id: "3gY1bGEUtm4", titel: "Instructie Koffiepercolator", categorie: "Keukenapparatuur" },
 ];  
