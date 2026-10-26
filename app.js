@@ -66,9 +66,12 @@ function toonVideos() {
 
     const gevonden = videos.filter(v => {
 
-    if (zoekterm !== "") {
-        return normaliseer(v.titel).includes(zoekterm);
-    }
+  if (zoekterm) {
+
+    geselecteerd = "";
+
+    return normaliseer(v.titel).includes(zoekterm);
+}
 
     return geselecteerd === "" ||
            v.categorie === geselecteerd;
