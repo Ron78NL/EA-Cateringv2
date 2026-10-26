@@ -64,10 +64,16 @@ function updateMenu() {
 function toonVideos() {
     const zoekterm = normaliseer(zoekveld.value.trim());
 
-    const gevonden = videos.filter(v =>
-        (geselecteerd === "" || v.categorie === geselecteerd) &&
-        normaliseer(v.titel).includes(zoekterm)
-    );
+    const gevonden = videos.filter(v => {
+
+    if (zoekterm !== "") {
+        return normaliseer(v.titel).includes(zoekterm);
+    }
+
+    return geselecteerd === "" ||
+           v.categorie === geselecteerd;
+
+});
 
     if (gevonden.length === 0) {
         aantal.textContent = "Geen video's gevonden. Probeer een andere zoekterm.";
