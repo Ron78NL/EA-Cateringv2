@@ -20,7 +20,7 @@ const categorieen = [
 // titel: wat de leerling ziet
 // categorie: een id uit de lijst hierboven
 const videos = [
-  { id: "AZdPYo1RWfQ", titel: "Instructie Reduceren van Bouillon", categorie: "bouillons" },
+  { id: "stCqu0-vqB4", titel: "Instructie Reduceren van Bouillon", categorie: "bouillons" },
   { id: "ABYB6CxNeVo", titel: "Instructie Degraisseren van Bouillon", categorie: "bouillons" },
   { id: "KfdiOrQkN4U", titel: "Instructie Arrosseren", categorie: "bereidingstechnieken" },
   { id: "KD_NEiQ8Lj4", titel: "Instructie Aanbraden", categorie: "vlees-vis" },
