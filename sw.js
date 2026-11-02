@@ -1,5 +1,5 @@
-const CACHE = "ea-catering-v2";
-const BESTANDEN = ["./", "./index.html", "./styles.css", "./nac-logo.png"];
+const CACHE = "ea-catering-v3";
+const BESTANDEN = ["./", "./index.html", "./styles.css", "./app.js", "./videos.js", "./nac-logo.png"];
 
 self.addEventListener("install", (event) => {
     event.waitUntil(caches.open(CACHE).then((c) => c.addAll(BESTANDEN)));

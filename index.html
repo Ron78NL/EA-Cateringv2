@@ -3,46 +3,61 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EA Catering – Instructievideo's</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>NAC Performance Support | EA Catering – Instructievideo's</title>
+    <link rel="stylesheet" href="styles.css?v=3">
     <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#2563eb">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="EA Catering">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <meta name="theme-color" content="#0f1c3f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="EA Catering">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 </head>
 <body>
 
-<header class="topbar">
-    <div class="topbar-tekst">
-        <h1>EA CATERING</h1>
-        <p>Instructievideo's keukentechnieken</p>
+<header>
+    <div class="header-content">
+        <div class="header-logo">
+            <img src="nac-logo.png" alt="Navy Academy embleem">
+        </div>
+        <div class="header-title">
+            <h1>EA Catering</h1>
+            <p>Navy Academy Oostende | Instructievideo's keukentechnieken</p>
+        </div>
     </div>
-    <img src="Powered by DS2P zonder achtergrond.png" alt="" class="topbar-logo">
 </header>
-<input id="zoekveld" type="search" placeholder="🔍 Zoek een video..." autocomplete="off" aria-label="Zoeken">
 
-<p id="aantal" aria-live="polite"></p>
+<nav class="nav-tabs" id="categorieMenu" aria-label="Categorieën"></nav>
 
-<details class="categorie-paneel" id="categoriePaneel">
-    <summary class="categorie-kop" id="categorieKop">📚 KEUKENTECHNIEKEN</summary>
-    <div class="categorie-menu" id="categorieMenu"></div>
-</details>
+<main class="container">
+    <div class="hero-section">
+        <h2 id="kop">Alle instructievideo's</h2>
+        <p>Zoek een techniek of kies hierboven een categorie. Tik op een video om hem meteen te bekijken.</p>
+        <div class="zoek">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input id="zoekveld" type="search" placeholder="Zoek een video, bijvoorbeeld julienne of bouillon" autocomplete="off" aria-label="Zoeken">
+        </div>
+        <p id="aantal" class="aantal" aria-live="polite"></p>
+    </div>
 
-<div id="videoGrid" class="video-grid"></div>
+    <div id="videoGrid" class="video-grid"></div>
+</main>
 
-<!-- Afspeelvenster -->
-<div id="videoModal" class="video-modal">
+<footer>
+    <p>&copy; 2026 Navy Academy Oostende (NAC) - Direct support To Production (DS2P). Alle rechten voorbehouden.</p>
+</footer>
+
+<!-- Afspeelscherm -->
+<div id="videoModal" class="video-modal" role="dialog" aria-modal="true" aria-labelledby="videoTitel">
+    <button type="button" class="video-sluit" id="sluit" aria-label="Sluiten">✕</button>
     <div class="video-modal-inner">
-        <button type="button" class="video-sluit" id="sluit" aria-label="Sluiten">✕</button>
+        <h2 class="video-titel" id="videoTitel"></h2>
         <div class="video-frame" id="videoFrame"></div>
         <a id="videoExtern" class="video-extern" target="_blank" rel="noopener noreferrer">Bekijk op YouTube</a>
     </div>
 </div>
 
 <script src="videos.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=3"></script>
 <script>
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./sw.js");
