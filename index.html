@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NAC Performance Support | EA Catering – Instructievideo's</title>
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=4">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0f1c3f">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,7 +21,12 @@
         </div>
         <div class="header-title">
             <h1>EA Catering</h1>
-            <p>Navy Academy Oostende | Instructievideo's keukentechnieken</p>
+            <p data-i18n="sub">Navy Academy Oostende | Instructievideo's keukentechnieken</p>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Taal / Langue / Language">
+            <button type="button" class="lang-btn active" data-lang="nl" title="Nederlands">NL</button>
+            <button type="button" class="lang-btn" data-lang="fr" title="Français">FR</button>
+            <button type="button" class="lang-btn" data-lang="en" title="English">EN</button>
         </div>
     </div>
 </header>
@@ -31,7 +36,7 @@
 <main class="container">
     <div class="hero-section">
         <h2 id="kop">Alle instructievideo's</h2>
-        <p>Zoek een techniek of kies hierboven een categorie. Tik op een video om hem meteen te bekijken.</p>
+        <p data-i18n="intro">Zoek een techniek of kies hierboven een categorie. Tik op een video om hem meteen te bekijken.</p>
         <div class="zoek">
             <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             <input id="zoekveld" type="search" placeholder="Zoek een video, bijvoorbeeld julienne of bouillon" autocomplete="off" aria-label="Zoeken">
@@ -43,7 +48,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2026 Navy Academy Oostende (NAC) - Direct support To Production (DS2P). Alle rechten voorbehouden.</p>
+    <p data-i18n="footer">&copy; 2026 Navy Academy Oostende (NAC) - Direct support To Production (DS2P). Alle rechten voorbehouden.</p>
 </footer>
 
 <!-- Afspeelscherm -->
@@ -52,12 +57,12 @@
     <div class="video-modal-inner">
         <h2 class="video-titel" id="videoTitel"></h2>
         <div class="video-frame" id="videoFrame"></div>
-        <a id="videoExtern" class="video-extern" target="_blank" rel="noopener noreferrer">Bekijk op YouTube</a>
+        <a id="videoExtern" class="video-extern" target="_blank" rel="noopener noreferrer" data-i18n="yt">Bekijk op YouTube</a>
     </div>
 </div>
 
 <script src="videos.js"></script>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 <script>
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./sw.js");

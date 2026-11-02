@@ -29,6 +29,12 @@ header {
 .header-title h1 { font-size: 1.8rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 0.2rem; }
 .header-title p { font-size: 0.95rem; color: #d0dbe7; font-weight: 300; }
 
+/* Taalkeuze, zelfde als de andere NAC-pagina's */
+.lang-switch { margin-left: auto; align-self: flex-start; display: flex; gap: 0.4rem; flex-shrink: 0; }
+.lang-btn { background: transparent; color: #d0dbe7; border: 1px solid rgba(197,160,89,0.6); border-radius: 4px; padding: 0.3rem 0.65rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s ease; }
+.lang-btn:hover { color: white; border-color: var(--accent-gold); }
+.lang-btn.active { background: var(--accent-gold); color: var(--primary-navy); border-color: var(--accent-gold); }
+
 /* Categorieën als tabbalk */
 .nav-tabs {
     background-color: var(--secondary-navy);
@@ -207,7 +213,8 @@ footer {
 
 @media (max-width: 640px) {
     header { padding: 0.8rem 1rem; }
-    .header-content { gap: 0.8rem; }
+    .header-content { gap: 0.8rem; flex-wrap: wrap; }
+    .lang-switch { order: 3; margin-left: 0; width: 100%; justify-content: flex-end; }
     .header-logo { width: 64px; height: 64px; }
     .header-title h1 { font-size: 1.3rem; }
     .header-title p { font-size: 0.8rem; }
