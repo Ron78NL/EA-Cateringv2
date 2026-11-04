@@ -91,6 +91,6 @@ const videos = [
   { id: "Ei6WB6FSFMk", titel: "Instructie Combisteamer", fr: "Four mixte", en: "Combi steamer", categorie: "keukenapparatuur" },
   { id: "uXwLpGXUskI", titel: "Instructie Friteuse", fr: "Friteuse", en: "Deep fryer", categorie: "keukenapparatuur" },
   { id: "x7nfcie2KW0", titel: "Instructie Kookketel", fr: "Marmite", en: "Boiling kettle", categorie: "keukenapparatuur" },
-  { id: "_ILm2zaaYYc", titel: "Instructie Roux bereiden", fr: "Préparer un roux", en: "Making a roux", categorie: "keukenapparatuur" },
+  { id: "_ILm2zaaYYc", titel: "Instructie Roux bereiden", fr: "Préparer un roux", en: "Making a roux", categorie: "sauzen" },
   { id: "akdxLdKjL2U", titel: "Instructie Koffiepercolator", fr: "Percolateur à café", en: "Coffee percolator", categorie: "keukenapparatuur" },
 ];  
