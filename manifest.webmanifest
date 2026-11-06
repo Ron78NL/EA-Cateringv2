@@ -1,26 +1,27 @@
 {
-    "name": "EA Catering – Instructievideo's",
-    "short_name": "EA Catering",
-    "description": "Instructievideo's keukentechnieken",
-    "start_url": "./",
-    "scope": "./",
-    "display": "standalone",
-    "orientation": "portrait",
-    "background_color": "#ffffff",
-    "theme_color": "#0f1c3f",
-    "lang": "nl",
-    "icons": [
-        {
-            "src": "icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
-        }
-    ]
+  "id": "/EA-Cateringv2/",
+  "name": "EA Catering – Instructievideo's",
+  "short_name": "EA Catering",
+  "start_url": "/EA-Cateringv2/",
+  "scope": "/EA-Cateringv2/",
+  "description": "Instructievideo's keukentechnieken",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0f1c3f",
+  "lang": "nl",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }

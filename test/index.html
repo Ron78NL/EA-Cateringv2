@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="styles.css?v=3">
     <meta name="theme-color" content="#0b1530">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="EA Catering">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+    <meta name="apple-mobile-web-app-title" content="EA Cat. TEST">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 </head>
 <body>
 
@@ -72,5 +73,10 @@
 
 <script src="../videos.js"></script>
 <script src="../app.js?v=4"></script>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js", { scope: "./" });
+}
+</script>
 </body>
 </html>
