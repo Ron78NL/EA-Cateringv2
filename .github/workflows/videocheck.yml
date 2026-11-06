@@ -23,7 +23,7 @@ jobs:
       - name: Video's controleren
         id: check
         env:
-          SHEET_CSV: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQoe7zWFTQrhdwAXQv3ckLRjSR-xwkC4fB6ZJviVZVIM93zCs-ZH25S8w0Aq_dnjtp6mn_daJ7IswPv/pub?single=true&output=csv&gid=0"
+          SHEET_CSV: ""   # V2 gebruikt videos.js; de Sheet wordt gecontroleerd door de robot van V3
         run: python .github/scripts/videocheck.py
       - name: Melding maken, bijwerken of sluiten
         env:
