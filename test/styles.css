@@ -225,7 +225,7 @@ footer {
     .container { margin-top: -2.25rem; }
     .video-grid { grid-template-columns: 1fr; gap: .75rem; }
     /* Compacte rij: miniatuur links, tekst rechts — meer video's per scherm */
-    .video-link { display: grid; grid-template-columns: 9.5rem 1fr; align-items: center; }
+    .video-link { display: grid; grid-template-columns: 9.5rem 1fr; align-items: start; }
     .video-thumb { aspect-ratio: 16 / 9; }
     .video-thumb::after { width: 2.4rem; height: 2.4rem; background-size: 1.15rem; }
     .video-info { padding: .7rem .85rem; gap: .25rem; min-width: 0; }
